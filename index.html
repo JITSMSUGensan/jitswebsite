@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./lib/bootstrap-5.3.1-dist/css/bootstrap.min.css">
   </head>
   <body class="bg-black">
-    <div class="d-flex flex-row z-2 min-vh-100 min-vw-100 justify-content-center align-content-center">  
+    <div class="d-flex position-relative flex-row z-2 min-vh-100 min-vw-100 justify-content-center align-content-center">  
       <div class="text-white d-flex flex-column justify-content-center align-content-center">
         <!-- JITS Logo -->
         <img class="mt-auto" alt="jits-logo" height="250" width="250" src="./asset/jits.png">
@@ -19,6 +19,10 @@
         <div class="mt-auto mb-5 d-flex justify-content-center"><a class="link-light" href="#">Contact us</a></div>
       </div>
     </div>
+
+    <video autoplay muted loop id="myVideo" class="position-fixed z-1 min-vh-100 min-vw-100 top-0 start-0">
+      <source src="./asset/digital-background.mp4" type="video/mp4">
+    </video>
 
     <script src="./lib/bootstrap-5.3.1-dist/js/bootstrap.min.js"></script>
   </body>
