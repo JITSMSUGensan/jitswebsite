@@ -1,8 +1,18 @@
 {
+  "name": "jitswebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JITSMSUGensan/jitswebsite.git",
+  "author": "Ren-Logronio <reinhart.logronio@msugensan.edu.ph>",
+  "license": "MIT",
   "devDependencies": {
-    "tailwindcss": "^3.3.3"
+    "tailwind": "^4.0.0"
   },
   "scripts": {
-    "dev":"npx tailwindcss -i ./styles/tailwind.css -o ./styles/output.css --watch"
+    "dev:css": "tailwindcss -i ./styles/tailwind.css -o ./styles/main.css --watch",
+    "build:css": "tailwindcss -i ./styles/tailwind.css -o ./styles/main.css --minify"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.0"
   }
 }
