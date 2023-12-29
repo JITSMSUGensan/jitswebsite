@@ -11,32 +11,44 @@
         <script type="module" src="./src/main.js"></script>
     </head>
     <body class="dark:text-white text-black">
-        <div class="z-40 "></div>
-        <div class="relative min-h-svh z-30">
-            <nav class="h-14 lg:px-32 md:px-16 sm:px-12 px-3 flex justify-between">
+        <div class="overflow-y-hidden relative min-h-dvh flex flex-col z-30">
+            <nav class="fixed z-[35] h-14 w-full lg:px-32 md:px-16 sm:px-12 px-3 flex flex-row justify-between">
                 <ul class="flex flex-row justify-center my-auto list-none">
-                    <li>JITSORG</li>
-                </ul>
-                <ul class="sm:flex hidden flex-row justify-center my-auto list-none">
-                    <li class="md:me-10 me-4">
+                    <li class="flex flex-row">
+                        <p class="font-md">JITS</p>
+                        <p class="font-bold text-teal-800 dark:text-teal-400">ORG</p>
+                    </li>
+                </ul> 
+                <ul class="md:flex hidden flex-row justify-center my-auto list-none">
+                    <li class="lg:me-10 me-4">
                         <a class="p-4" href="#home">HOME</a>
                     </li>
-                    <li class="md:me-10 me-4">
+                    <li class="lg:me-10 me-4">
                         <a class="p-4" href="#announcements">ANNOUNCEMENTS</a>
                     </li>
-                    <li class="md:me-10 me-4">
+                    <li class="lg:me-10 me-4">
                         <a class="p-4" href="#events">EVENTS</a>
                     </li>
-                    <li class="md:me-10 me-4">
+                    <li class="lg:me-10 me-4">
                         <a class="p-4" href="#about">ABOUT</a>
                     </li>
-                    <li class="w-14">
-                        <a id="darkModeToggleBar" href="#" class="flex flex-row relative rounded-sm h-full overflow-hidden border border-teal-950 dark:border-teal-200">
+                    <li class="w-12">
+                        <a id="darkModeToggleBar" class="flex flex-row relative rounded-sm h-full overflow-hidden 
+                                                        cursor-pointer border border-teal-950 dark:border-teal-200">
                             <div id="darkModeToggleButton" class="h-full w-1/2 absolute bg-teal-950 dark:bg-teal-200"></div>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <section class=" flex flex-col justify-center z-30 border min-h-screen border-teal-500">
+                <h1 class="text-center">Section 1</h1>
+            </section>
+            <section class=" flex flex-col justify-center z-30  border min-h-screen border-slate-500">
+                <h1 class="text-center">Section 2</h1>
+            </section>
+            <section class=" flex flex-col justify-center z-30 border min-h-screen border-indigo-500">
+                <h1 class="text-center">Section 3</h1>
+            </section>
         </div>
         <div class="min-h-dvh min-w-full 
                     z-0 fixed top-0 left-0 
