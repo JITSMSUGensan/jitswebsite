@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,22 @@
         <link rel="icon" type="image/x-icon" href="./asset/logo.ico">
         <link rel="stylesheet" href="./styles/main.css">
     </head>
-    <body class="font-">
-        <h1 class="text-center font-extrabold text-teal-400">Hello Word</h1>
+    <body class="dark:text-white text-black">
+        <div class="relative min-h-svh z-30">
+            <nav class="h-14 lg:px-32 md:px-16 sm:px-12 px-3 flex justify-between border-b border-black dark:border-white">
+                <ul class="flex flex-row justify-center my-auto list-none">
+                    <li class="md:me-8 me-3">Logo 1</li>
+                    <li>Logo 2</li>
+                </ul>
+                <ul class="sm:flex hidden flex-row justify-center my-auto list-none">
+                    <li class="md:me-8 me-3">Announcements</li>
+                    <li class="md:me-8 me-3">Events</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="min-h-dvh min-w-full 
+                    z-0 fixed top-0 left-0 
+                    bg-teal-100 dark:bg-slate-950"></div>
     </body>
 </html>
