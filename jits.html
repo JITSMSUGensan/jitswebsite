@@ -8,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/x-icon" href="./asset/logo.ico">
         <link rel="stylesheet" href="./styles/main.css">
+        <script type="module" src="./src/main.js"></script>
     </head>
     <body class="dark:text-white text-black">
+        <div class="z-40 "></div>
         <div class="relative min-h-svh z-30">
             <nav class="h-14 lg:px-32 md:px-16 sm:px-12 px-3 flex justify-between">
                 <ul class="flex flex-row justify-center my-auto list-none">
@@ -17,16 +19,21 @@
                 </ul>
                 <ul class="sm:flex hidden flex-row justify-center my-auto list-none">
                     <li class="md:me-10 me-4">
-                        <a>HOME</a>
+                        <a class="p-4" href="#home">HOME</a>
                     </li>
                     <li class="md:me-10 me-4">
-                        <a>ANNOUNCEMENTS</a>
+                        <a class="p-4" href="#announcements">ANNOUNCEMENTS</a>
                     </li>
                     <li class="md:me-10 me-4">
-                        <a>EVENTS</a>
+                        <a class="p-4" href="#events">EVENTS</a>
                     </li>
                     <li class="md:me-10 me-4">
                         <a class="p-4" href="#about">ABOUT</a>
+                    </li>
+                    <li class="w-14">
+                        <a id="darkModeToggleBar" href="#" class="flex flex-row relative rounded-sm h-full overflow-hidden border border-teal-950 dark:border-teal-200">
+                            <div id="darkModeToggleButton" class="h-full w-1/2 absolute bg-teal-950 dark:bg-teal-200"></div>
+                        </a>
                     </li>
                 </ul>
             </nav>
