@@ -13,16 +13,19 @@ class Scroller {
     isScrolling;
     callbackOnEndArray;
     callbackOnStartArray;
+    callbackDuringArray;
     scrollTimeout;
     scrollDirection;
-    timeout = 75;
+    timeout;
 
     constructor() {
         this.isScrolling = false;
         this.callbackOnEndArray = [];
         this.callbackOnStartArray = [];
+        this.callbackDuringArray = [];
         this.scrollDirection;
-        this.scrollLength = 0;
+        this.scrollLength = window.scrollY || document.documentElement.scrollTop;
+        this.timeout = 100;
         this.scrollTimeout = null;
 
         document.addEventListener("scroll", (event) => {
@@ -51,6 +54,7 @@ class Scroller {
             this.scrollLength = newScrollLength;
         });
 
+        this.loopCallbackDuring();
     }
 
     bindCallbackOnScrollStart(callback){
@@ -59,6 +63,17 @@ class Scroller {
 
     bindCallbackOnScrollEnd(callback){
         this.callbackOnEndArray.push(callback);
+    }
+
+    bindCallbackOnScrollDuring(callback) {
+        this.callbackDuringArray.push(callback);
+    }
+
+    loopCallbackDuring() {
+        if(this.isScrolling){
+            this.callbackDuringArray.forEach(callback => callback());
+        }
+        setTimeout(() => this.loopCallbackDuring(), this.timeout);
     }
 
     getIsScrolling(){
@@ -70,6 +85,10 @@ class Scroller {
             callbackOnEndArray: this.callbackOnEndArray,
             callbackOnStartArray: this.callbackOnStartArray,
         }
+    }
+
+    getScrollLength(){
+        return this.scrollLength;
     }
 
     getScrollDirection(){
