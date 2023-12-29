@@ -452,6 +452,8 @@ html {
 
 * {
   animation: all 0.5s ease-in-out;
+  border-width: 1px;
+  border-color: rgba(80, 80, 80)
 }
 
 *, ::before, ::after{
@@ -630,8 +632,8 @@ html {
   margin-bottom: 1.25rem;
 }
 
-.me-3{
-  margin-inline-end: 0.75rem;
+.me-4{
+  margin-inline-end: 1rem;
 }
 
 .ms-2{
@@ -688,15 +690,6 @@ html {
 
 .border{
   border-width: 1px;
-}
-
-.border-b{
-  border-bottom-width: 1px;
-}
-
-.border-black{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-teal-100{
@@ -763,8 +756,8 @@ html {
 }
 
 @media (min-width: 768px){
-  .md\:me-8{
-    margin-inline-end: 2rem;
+  .md\:me-10{
+    margin-inline-end: 2.5rem;
   }
 
   .md\:px-16{
@@ -778,11 +771,6 @@ html {
     padding-left: 8rem;
     padding-right: 8rem;
   }
-}
-
-:is(:where(.dark) .dark\:border-white){
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 :is(:where(.dark) .dark\:bg-slate-950){
