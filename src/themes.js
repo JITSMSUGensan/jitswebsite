@@ -1,10 +1,10 @@
 
+const html = document.documentElement;
+
 const themes = {
     light: 'light',
     dark: 'dark'
 }
-
-const html = document.documentElement;
 
 const getTheme = () => {
     return localStorage.getItem('theme');

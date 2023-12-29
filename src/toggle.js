@@ -3,6 +3,7 @@ import mylog from './mylog.js';
 
 const logger = new mylog('Toggle');
 
+// Toggle class handles the effects and callbacks for a toggle component
 class Toggle {
     toggleBar; // the clickable toggle itself
     toggleButton; // the little thing that moves in the toggle

@@ -1,5 +1,4 @@
 // my own bullshit implementation of a logger
-
 class MyLog {
     source;
 
