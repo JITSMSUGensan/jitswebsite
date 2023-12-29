@@ -621,11 +621,6 @@ html {
   margin-right: 1.25rem;
 }
 
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
@@ -635,12 +630,12 @@ html {
   margin-bottom: 1.25rem;
 }
 
-.ms-2{
-  margin-inline-start: 0.5rem;
-}
-
 .me-3{
   margin-inline-end: 0.75rem;
+}
+
+.ms-2{
+  margin-inline-start: 0.5rem;
 }
 
 .flex{
@@ -651,24 +646,8 @@ html {
   display: none;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
-.h-10{
-  height: 2.5rem;
-}
-
-.h-16{
-  height: 4rem;
-}
-
 .h-14{
   height: 3.5rem;
-}
-
-.h-11{
-  height: 2.75rem;
 }
 
 .min-h-dvh{
@@ -677,14 +656,6 @@ html {
 
 .min-h-svh{
   min-height: 100svh;
-}
-
-.min-h-lvh{
-  min-height: 100lvh;
-}
-
-.w-full{
-  width: 100%;
 }
 
 .min-w-full{
@@ -723,11 +694,6 @@ html {
   border-bottom-width: 1px;
 }
 
-.border-white{
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -736,10 +702,6 @@ html {
 .bg-teal-100{
   --tw-bg-opacity: 1;
   background-color: rgb(204 251 241 / var(--tw-bg-opacity));
-}
-
-.bg-transparent{
-  background-color: transparent;
 }
 
 .p-2{
@@ -754,37 +716,14 @@ html {
   padding: 1rem;
 }
 
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.py-12{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.px-12{
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.px-32{
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
 
-.ps-12{
-  padding-inline-start: 3rem;
-}
-
-.pe-12{
-  padding-inline-end: 3rem;
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .text-center{
@@ -798,10 +737,6 @@ html {
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-inherit{
-  color: inherit;
 }
 
 .shadow{
@@ -843,11 +778,6 @@ html {
     padding-left: 8rem;
     padding-right: 8rem;
   }
-}
-
-:is(:where(.dark) .dark\:border-black){
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 :is(:where(.dark) .dark\:border-white){
