@@ -1,5 +1,6 @@
+import { fadeNavigationBackdropCallback, fadeNavigationCallback, fadeNavigationBackdrop } from "./nav.js";
 import { isLightMode, initializeTheme, toggleTheme } from "./themes.js";
-import { fadeNavigationBackdropCallback, fadeNavigationCallback, fadeNavigation, fadeNavigationBackdrop } from "./nav.js";
+import initializeNavigationDropdown from "./navdropdown.js";
 import Toggle from "./toggle.js";
 import MyLog from "./mylog.js";
 import Scroller from "./scroll.js";
@@ -11,6 +12,18 @@ try {
     document.addEventListener('DOMContentLoaded', () => {
         /* Theme Initialization */
         initializeTheme();
+
+        /* Navigation Dropdown Initialization */
+        const navigationDropdownBar = document.getElementById('navigationDropdownBar');
+        const navigationDropdownButton = document.getElementById('navigationDropdownButton');
+        const navigationDropdownBurger = document.getElementById('navigationDropdownBurger');
+        const navigationDropdownXMark = document.getElementById('navigationDropdownXMark');
+        initializeNavigationDropdown({
+            navigationDropdownBar: navigationDropdownBar,
+            navigationDropdownButton: navigationDropdownButton,
+            navigationDropdownBurger: navigationDropdownBurger,
+            navigationDropdownXMark: navigationDropdownXMark,
+        });
 
         /* darkMode Toggle Initalization  */
         const darkModeToggleBar = document.getElementById('darkModeToggleBar');
@@ -42,8 +55,6 @@ try {
     });
 
 } catch (error) {
-
     logger.error('Something wrong happened during DOMContentLoaded');
     logger.error(error.message ? error.message : error);
-
 };

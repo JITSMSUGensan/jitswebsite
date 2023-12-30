@@ -7,6 +7,22 @@ const translateFromRightToLeft = [
     {transform: 'translateX(100%)'},
     {transform: 'translateX(0%)'}
 ];
+const fadeInRotateByClockwise = [
+    {opacity: 0, transform: 'rotate(0deg)'},
+    {opacity: 1, transform: 'rotate(360deg)'},
+];
+const fadeInRotateByCounterClockwise = [
+    {opacity: 0, transform: 'rotate(0deg)'},
+    {opacity: 1, transform: 'rotate(-360deg)'},
+];
+const fadeOutRotateByClockwise = [
+    {opacity: 1, transform: 'rotate(0deg)'},
+    {opacity: 0, transform: 'rotate(360deg)'},
+];
+const fadeOutRotateByCounterClockwise = [
+    {opacity: 1, transform: 'rotate(0deg)'},
+    {opacity: 0, transform: 'rotate(-360deg)'},
+];
 const drawDownByXPixels = (x) => {
     return [
         {transform: `translateY(-${x}px)`},
@@ -60,6 +76,10 @@ const animation = {
     keyframe: {
         translateFromLeftToRight: translateFromLeftToRight,
         translateFromRightToLeft: translateFromRightToLeft,
+        fadeInRotateByClockwise: fadeInRotateByClockwise,
+        fadeInRotateByCounterClockwise: fadeInRotateByCounterClockwise,
+        fadeOutRotateByClockwise: fadeOutRotateByClockwise,
+        fadeOutRotateByCounterClockwise: fadeOutRotateByCounterClockwise,
         drawDownByXPixels: drawDownByXPixels,
         drawUpByXPixels: drawUpByXPixels,
         fadeInByXPercent: fadeInByXPercent,

@@ -33,6 +33,7 @@ class Scroller {
 
             const newScrollLength = window.scrollY || document.documentElement.scrollTop;
             const scrollDifference = newScrollLength - this.scrollLength;
+            this.scrollDirection = scrollDifference > 0 ? direction.down : direction.up;
             
             if(!this.isInitialized) {
                 setTimeout(() => this.isInitialized = true, this.timeout);
@@ -41,7 +42,6 @@ class Scroller {
 
             if(!this.isScrolling) {
                 this.isScrolling = true;
-                this.scrollDirection = scrollDifference > 0 ? direction.down : direction.up;
                 this.callbackOnStartArray.forEach(callback => callback());
             }
     
