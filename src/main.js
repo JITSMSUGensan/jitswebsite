@@ -1,5 +1,5 @@
 import { isLightMode, initializeTheme, toggleTheme } from "./themes.js";
-import { fadeNavigationBackdropCallback, fadefadeNavigationBackdrop } from "./nav.js";
+import { fadeNavigationBackdropCallback, fadeNavigationCallback, fadeNavigation, fadeNavigationBackdrop } from "./nav.js";
 import Toggle from "./toggle.js";
 import MyLog from "./mylog.js";
 import Scroller from "./scroll.js";
@@ -25,13 +25,17 @@ try {
         new Toggle(darkModeToggle);
 
         const navigationBackdrop = document.getElementById('navigationBackdrop'); 
+        const navigationBar = document.getElementById('navigationBar');
 
         /* Scroller Initialization */
         const scroller = new Scroller();
 
         /* Fade in the navigation background during user scrolls down  */
         scroller.bindCallbackOnScrollDuring(fadeNavigationBackdropCallback(navigationBackdrop, scroller)); 
-        fadefadeNavigationBackdrop(navigationBackdrop, scroller);
+        fadeNavigationBackdrop(navigationBackdrop, scroller);
+
+        /* Drawer the navigation bar if the user scrolls down */ 
+        scroller.bindCallbackOnScrollDuring(fadeNavigationCallback(navigationBar, navigationBackdrop, scroller));
 
         const unsupportedBrowserNotice = document.getElementById('unsupportedBrowserNotice');
         if(!(!!window.chrome)) unsupportedBrowserNotice.classList.remove('hidden');

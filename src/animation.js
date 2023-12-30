@@ -7,13 +7,25 @@ const translateFromRightToLeft = [
     {transform: 'translateX(100%)'},
     {transform: 'translateX(0%)'}
 ];
-const fadeInX = (x) => {
+const drawDownByXPixels = (x) => {
+    return [
+        {transform: `translateY(-${x}px)`},
+        {transform: 'translateY(0px)'},
+    ];
+};
+const drawUpByXPixels = (x) => {
+    return [
+        {transform: 'translateY(0px)'},
+        {transform: `translateY(-${x}px)`},
+    ];
+};
+const fadeInByXPercent = (x) => {
     return [
         {opacity: 0},
         {opacity: x},
     ];
 };
-const fadeOutX = (x) => {
+const fadeOutByXPercent = (x) => {
     return [
         {opacity: x},
         {opacity: 0},
@@ -48,8 +60,10 @@ const animation = {
     keyframe: {
         translateFromLeftToRight: translateFromLeftToRight,
         translateFromRightToLeft: translateFromRightToLeft,
-        fadeInX: fadeInX,
-        fadeOutX: fadeOutX,
+        drawDownByXPixels: drawDownByXPixels,
+        drawUpByXPixels: drawUpByXPixels,
+        fadeInByXPercent: fadeInByXPercent,
+        fadeOutByXPercent: fadeOutByXPercent,
         fadeInTranslateYPixelsFromAbove: fadeInTranslateYPixelsFromAbove,
         fadeOutTranslateYPixelsToAbove: fadeOutTranslateYPixelsToAbove,
         fromAndTo: fromAndTo,

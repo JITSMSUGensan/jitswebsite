@@ -5,6 +5,7 @@ const logger = new MyLog('Scroller');
 const direction = {
     up: 'up',
     down: 'down',
+    none: 'none',
 }
 
 // Scroller is a class responsible for handling scroll events and actions related to scrolling in general
@@ -48,6 +49,7 @@ class Scroller {
     
             this.scrollTimeout = setTimeout(() => {
                 this.isScrolling = false;
+                this.scrollDirection = direction.none;
                 this.callbackOnEndArray.forEach(callback => callback());
             }, this.timeout);
 
